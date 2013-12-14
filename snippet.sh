@@ -1,4 +1,6 @@
-# Snippet - Chafic Najjar
+#!/bin/bash
+# Snippet
+# Author: Chafic Najjar <chafic.najjar@gmail.com>
 
 output_directory="$HOME/Desktop/output"
 
