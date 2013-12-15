@@ -4,22 +4,21 @@
 
 output_directory="$HOME/Desktop/output"
 
+# create output directory only if it doesn't exist
 if [ ! -d "$output_directory" ]; then
     mkdir ~/Desktop/output
 fi
 
-# current directroy
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
+# go to specified directory (argument passed when program was executed)
 cd "$1"
 
-# find the durations of all mp4 files
+# find the durations of all mp4 files and store in file "durations"
 find . -name "*.mp4" |\
     xargs -I{} ffmpeg -i {} 2>&1 |\
     grep "Duration" |\
     cut -d ' ' -f 4 |\
     sed s/,// |\
-    awk '{ split($1, A, ":"); split(A[3], B, "."); print 3600*A[1] + 60*A[2] + B[1] }' >> temp
+    awk '{ split($1, A, ":"); split(A[3], B, "."); print 3600*A[1] + 60*A[2] + B[1] }' >> durations 
 
 # store the durations in an array
 i=0
@@ -27,7 +26,7 @@ array=()
 while read p; do
     array+=("$p")
     i=$((i+1))
-done < temp
+done < durations 
  
 find . -name "*.mp4" > temp2
 
@@ -41,6 +40,6 @@ while read p; do
 done < temp2
 
 # remove temporary files
-rm "temp"
+rm "durations"
 rm "temp2"
 
