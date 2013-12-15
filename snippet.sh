@@ -28,7 +28,7 @@ while read p; do
     i=$((i+1))
 done < durations 
  
-find . -name "*.mp4" > temp2
+find . -name "*.mp4" > file_names
 
 # trim the videos
 i=0
@@ -37,9 +37,9 @@ while read p; do
     echo "$p"
     ffmpeg -y -i "$p" -t 10 -ss $((${array[$i]}-10)) -vcodec copy -acodec copy ~/Desktop/output/"$q"
     i=$((i+1))
-done < temp2
+done < file_names 
 
 # remove temporary files
 rm "durations"
-rm "temp2"
+rm "file_names"
 
