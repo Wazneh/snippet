@@ -7,5 +7,5 @@ Bash script that snips the last 10 seconds of several videos and merges them tog
 
 ## To do
 
-Replace ffmpeg instructions with avconv
-Add join feature (using avconv)
++ ~~Use avconv instead of ffmpeg~~ 
++ Add join feature (using avconv or MP4Box)
