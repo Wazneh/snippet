@@ -39,6 +39,6 @@ while read p; do
 done < file_names 
 
 # remove temporary files
-#rm "durations"
-#rm "file_names"
+rm "durations"
+rm "file_names"
 
