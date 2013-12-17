@@ -14,7 +14,7 @@ cd "$1"
 
 # find the durations of all mp4 files and store in file "durations"
 find . -name "*.mp4" |\
-    xargs -I{} avprob 2>&1 |\
+    xargs -I{} avprobe {} 2>&1 |\
     grep "Duration" |\
     cut -d ' ' -f 4 |\
     sed s/,// |\
