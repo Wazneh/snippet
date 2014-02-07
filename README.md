@@ -12,8 +12,9 @@ The output directory is `~/Desktop/output/`.
 ## Install 
 
 1. Install MP4Box: `sudo apt-get install gpac`
-2. Clone this repo: `git clone https://github.com/chaficnajjar/snippet.git`
-3. Run the script: `./snippet.sh`
+2. Install avconv: `sudo apt-get install libav-tools`
+3. Clone this repo: `git clone https://github.com/chaficnajjar/snippet.git`
+4. Run the script: `./snippet.sh`
 
 ## To do
 
@@ -26,4 +27,5 @@ The output directory is `~/Desktop/output/`.
 
 Author: Chafic Najjar - chafic.najjar@gmail.com
 
+avconv: http://libav.org/
 MP4Box: http://gpac.wp.mines-telecom.fr/mp4box/
