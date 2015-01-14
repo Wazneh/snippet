@@ -6,12 +6,12 @@ The output directory is `~/Desktop/output/`.
 
 ## Dependencies
 
-+ [avconv](http://libav.org/)
++ [avconv](http://libav.org/).
 + [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/).
 
 ### Ubuntu
 
-Install all dependencies on Ubuntu 14.04 and above:
+Install all dependencies on Ubuntu:
 
 `sudo apt-get install libav-tools gpac`
 
