@@ -1,31 +1,53 @@
-Snippet
-=======
+# Snippet
 
 Snippet is a bash script that snips the last 10 seconds of several mp4 files and merges them together into one mp4 file.
 
 The output directory is `~/Desktop/output/`.
 
-## Usage
+## Dependencies
 
-`./snippet.sh path/to/input/directory`
++ [avconv](http://libav.org/)
++ [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/).
 
-## Install 
+### Ubuntu
 
-1. Install MP4Box: `sudo apt-get install gpac`
-2. Install avconv: `sudo apt-get install libav-tools`
-3. Clone this repo: `git clone https://github.com/chaficnajjar/snippet.git`
-4. Run the script: `./snippet.sh`
+Install all dependencies on Ubuntu 14.04 and above:
 
-## To do
+`sudo apt-get install libav-tools gpac`
 
-+ ~~Use avconv instead of ffmpeg~~ 
-+ ~~Add join feature (using avconv or MP4Box)~~
-+ Add option for the user to choose the trim time
-+ Add option for the user to choose the video type
+## Installation and Usage
 
-## Credits
+```
+git clone https://github.com/chaficnajjar/snippet.git
+cd snippet
+./snippet.sh path/to/input/directory
+```
 
-Author: Chafic Najjar - chafic.najjar@gmail.com
+## License and Credits
 
-avconv: http://libav.org/
-MP4Box: http://gpac.wp.mines-telecom.fr/mp4box/
+Snippet code is MIT licensed.
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2015 Chafic
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+Created by [Chafic Najjar](https://github.com/chaficnajjar).
